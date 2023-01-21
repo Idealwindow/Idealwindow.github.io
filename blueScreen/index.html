@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="index.css">
+		<title>蓝屏小王子</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-ico">
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<div id="bluescreen_form">
+			<h4>系统</h4>
+			<div class="select" title="选择系统">
+				<select name="winver">
+					<option>Windows XP</option>
+					<option>Windows Vista</option>
+					<option>Windows 7</option>
+					<option>Windows 8</option>
+					<option>Windows 10</option>
+					<option>Windows 11</option>
+				</select>
+			</div>
+			<h4>错误类型(Windows 8以上系统适用)</h4>
+			<div class="select" title="选择错误类型">
+				<select name="winerror">
+					<option>CRITICAL_PROCESS_DIED</option>
+					<option>SYSTEM_THREAD_EXCEPTION_NOT_HANDLED</option>
+					<option>IRQL_NOT_LESS_OR_EQUAL</option>
+					<option>VIDEO_TDR_TIMEOUT_DETECTED</option>
+					<option>PAGE_FAULT_IN_NONPAGED_AREA</option>
+					<option>SYSTEM_SERVICE_EXCEPTION</option>
+					<option>DPC_WATCHDOG_VIOLATION</option>
+				</select>
+			</div>
+			<h4>错误代码(Windows 7及以下系统适用)</h4>
+			<input type="text" name="winerror" id="winerror" maxlength="9"" placeholder=" 必须输入一个十六进制的数 (如0x000000A)"
+				required="required">
+			<input type="submit" value="提交" id="submit">
+		</div>
+		<div id="bluescreen"></div>
+	</body>
+</html>
